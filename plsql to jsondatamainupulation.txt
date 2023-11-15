@@ -1,0 +1,28 @@
+DECLARE 
+   j APEX_JSON.t_values; 
+   r_count number;
+   p0 number;
+   moduleId VARCHAR2(10);
+   pCode VARCHAR2(10);
+   papers VARCHAR2(1);
+BEGIN
+   APEX_JSON.parse(j, '[{"MODULEID":"3","PCODE":"FEN","PAPERS":"N"},
+                        {"MODULEID":"3","PCODE":"QMT","PAPERS":"N"},
+                        {"MODULEID":"1","PCODE":"IEF","PAPERS":"N"}]'
+   );
+
+   -- Getting the number of JSON objects in the array
+   r_count := APEX_JSON.GET_COUNT(p_path => '.', p_values => j);
+   dbms_output.put_line('Nr. Record ' || r_count);
+
+   -- Looping for each JSON object
+   FOR i IN 1 .. r_count LOOP
+      -- Extracting values from the JSON object
+      moduleId := APEX_JSON.GET_VARCHAR2(p_path => '[' || i || '].MODULEID', p_values => j);
+      pCode := APEX_JSON.GET_VARCHAR2(p_path => '[' || i || '].PCODE', p_values => j);
+      papers := APEX_JSON.GET_VARCHAR2(p_path => '[' || i || '].PAPERS', p_values => j);
+
+      -- Printing the extracted values
+      dbms_output.put_line('ModuleId = ' || moduleId || ' PCODE = "' || pCode || '" PAPERS = "' || papers || '"');
+   END LOOP;
+END;
