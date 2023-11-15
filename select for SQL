@@ -1,0 +1,2 @@
+select * from fnd_timetable
+where the fnd_day_timetable = 'Monday'
