@@ -1,4 +1,4 @@
 select * from fnd_timetable
 where the fnd_day_timetable = 'Monday'
 and time = '2023-6-5'
-----checking the git desktop app push and pull
+----checking the git desktop app push and pull---
