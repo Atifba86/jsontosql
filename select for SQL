@@ -1,4 +1,2 @@
-select * from fnd_timetable
-where the fnd_day_timetable = 'Monday'
-and time = '2023-6-5'
----for testing purpose--
+select * from table 
+where month(date) = 11 And year(date) = 2023;
