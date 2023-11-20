@@ -1,3 +1,2 @@
 select * from table 
 where month(date) = 11 And year(date) = 2023;
-and 
