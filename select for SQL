@@ -1,2 +1,1 @@
-Select * from table 
-where month_table 
+select timestamp from fnd_timetable;
