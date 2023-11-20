@@ -1,1 +1,3 @@
-select timestamp from fnd_timetable;
+SELECT *
+FROM your_table
+WHERE MONTH(date_) = 11 AND YEAR(date_) = 2023;
