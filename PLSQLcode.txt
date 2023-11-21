@@ -12,10 +12,6 @@ BEGIN
                              p_id => :P0_DARKMODE);
 END;
 
-
-
-
-
 LIGHT MODE DYNAMIC ACTION
 -------------------------
 DECLARE
