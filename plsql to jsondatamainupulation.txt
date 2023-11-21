@@ -5,8 +5,6 @@ DECLARE
    moduleId VARCHAR2(10);
    pCode VARCHAR2(10);
    papers VARCHAR2(1);
-
-   
 BEGIN
    APEX_JSON.parse(j, '[{"MODULEID":"3","PCODE":"FEN","PAPERS":"N"},
                         {"MODULEID":"3","PCODE":"QMT","PAPERS":"N"},
