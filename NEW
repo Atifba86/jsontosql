@@ -49,10 +49,3 @@ v_total_row := row_total('def_record');
                next_record;
       end if;
    ------sub if end
-    end loop;
-  
-------------------------------------------------------------
-    last_record;
-      if  :PPT_PROV_ALLOWED.PROV_DESC is not null  then 
-               next_record;
-               end if;
