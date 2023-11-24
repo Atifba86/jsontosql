@@ -36,16 +36,3 @@ v_total_row := row_total('def_record');
 
 --------------------------------------------
 
-
-    go_block('PPT_PROV_ALLOWED');
-    last_record;
-    v_row_count := :System.Cursor_Record;
-    first_record;
-    for j in 1 .. v_row_count loop
-   ----sub if
-      if :PPT_PROV_ALLOWED.PROVID in (32) then
-      delete_Record;
-      elsif j!=v_row_count then 
-               next_record;
-      end if;
-   ------sub if end
