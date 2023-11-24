@@ -56,30 +56,3 @@ v_total_row := row_total('def_record');
       if  :PPT_PROV_ALLOWED.PROV_DESC is not null  then 
                next_record;
                end if;
-  
-    FOR j IN 1 .. v_total_row LOOP
-    
-      v_amount := GET_GROUP_NUMBER_CELL('def_record.amount', j);
-      provid := GET_GROUP_NUMBER_CELL('def_record.provid', j);
-      :PPT_PROV_ALLOWED.PROVID  := provid;
-      :PPT_PROV_ALLOWED.REMARKS := v_amount;
-    
-      begin
-        select PROV_DESC
-          into :PPT_PROV_ALLOWED.PROV_Desc
-          from exam_allow_reason
-         where provid = :PPT_PROV_ALLOWED.provid;
-      exception
-        when no_data_found then
-          :PPT_PROV_ALLOWED.PROV_Desc := null;
-      end;
-    
-      if j != v_total_row then
-        next_record;
-      end if;
-    
-    END LOOP;
-  
-  end if;
-  first_record;
-END;
