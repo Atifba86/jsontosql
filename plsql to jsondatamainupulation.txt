@@ -26,3 +26,4 @@ BEGIN
       -- Printing the extracted values
       dbms_output.put_line('ModuleId = ' || moduleId || ' PCODE = "' || pCode || '" PAPERS = "' || papers || '"');
    END LOOP;
+END;
