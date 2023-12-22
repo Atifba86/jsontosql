@@ -8,3 +8,7 @@ create or replace trigger beforepersoninsert
   on PERSONEL_INFO
   for each row
     
+declare
+ CNIC_ALREADY_EXIST EXCEPTION;
+    PRAGMA exception_init(CNIC_ALREADY_EXIST, -20111);
+
