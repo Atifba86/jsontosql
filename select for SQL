@@ -23,3 +23,7 @@ where t.cnic=:new.cnic;
  end if;
 
 
+:new.pass := ENCRYPT_PASSWORD(upper(:new.cnic), :new.pass);
+
+ :new.red_id := person_seq.nextval;
+
