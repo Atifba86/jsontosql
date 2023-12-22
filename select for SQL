@@ -11,4 +11,5 @@ create or replace trigger beforepersoninsert
 declare
  CNIC_ALREADY_EXIST EXCEPTION;
     PRAGMA exception_init(CNIC_ALREADY_EXIST, -20111);
+rcnt number:=0;
 
