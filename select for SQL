@@ -1,3 +1,10 @@
 SELECT *
 FROM your_table
 WHERE MONTH(date_) = 11 AND YEAR(date_) = 2023;
+---------------------------------------------
+---------------------------------------
+create or replace trigger beforepersoninsert
+  before insert
+  on PERSONEL_INFO
+  for each row
+    
