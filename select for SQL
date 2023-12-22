@@ -12,4 +12,7 @@ declare
  CNIC_ALREADY_EXIST EXCEPTION;
     PRAGMA exception_init(CNIC_ALREADY_EXIST, -20111);
 rcnt number:=0;
+begin
+ select count(1) into  rcnt from APPLICATION_USERS t
+where t.cnic=:new.cnic;
 
