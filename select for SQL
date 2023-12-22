@@ -22,3 +22,4 @@ where t.cnic=:new.cnic;
         return;
  end if;
 
+
