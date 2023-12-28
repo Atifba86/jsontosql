@@ -25,6 +25,7 @@ where t.cnic=:new.cnic;
 
 :new.pass := ENCRYPT_PASSWORD(upper(:new.cnic), :new.pass);
 
+
  :new.red_id := person_seq.nextval;
 
 end beforeinsert;
