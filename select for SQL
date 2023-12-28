@@ -16,8 +16,7 @@ begin
  select count(1) into  rcnt from APPLICATION_USERS t
 where t.cnic=:new.cnic;
 
- if rcnt > 0 then
-   
+ if rcnt > 0 then   
         raise_application_error(-20111, 'before CNIC ALREADY EXIST');
         return;
  end if;
