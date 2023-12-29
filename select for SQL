@@ -26,3 +26,5 @@ where t.cnic=:new.cnic;
 
 end beforeinsert;
 
+
+
