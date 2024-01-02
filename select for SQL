@@ -24,4 +24,4 @@ where t.cnic=:new.cnic;
 
  :new.red_id := person_seq.nextval;
 
-end beforeinsert
+end beforeinsert;
